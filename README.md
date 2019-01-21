@@ -1,37 +1,67 @@
-## Welcome to GitHub Pages
+# Cover Card landing page theme
 
-You can use the [editor on GitHub](https://github.com/yash1441/yash1441.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Quick set-up
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. [Fork this repository](https://github.com/epidrome/cover-card/fork)
+2. Edit the `_config.yml` with your online presence accounts and upload a background and an avatar image
+3. Go to `Settings`, scroll down to `Github Pages` and find your new home page link
 
-### Markdown
+## Introduction
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Create a cover page for your social media profiles, host it for free on Github Pages, and maintain it in minutes, not hours. [Demo](https://epidrome.github.io/cover-card)
 
-```markdown
-Syntax highlighted code block
+This theme is ideal for people or organizations who are busy enjoying their life or business and who want a simple business card for their online presence.
 
-# Header 1
-## Header 2
-### Header 3
+Please keep this README file because it contains the credits at the end and it might become handy after you have completely forgoten the set-up instructions.
 
-- Bulleted
-- List
+## Design rationale
 
-1. Numbered
-2. List
+The design rationale of this theme is to do less than other themes: "Less is more"
 
-**Bold** and _Italic_ and `Code` text
+The majority (99%) of the availabe jekyll themes offers a blog, but I have never been able to keep blog content (or its technology) updated over time.
 
-[Link](url) and ![Image](src)
-```
+Let's be honest with ourselves: How does an (abandoned) blog centered web site looks to new visitors if we have not posted since two years ago?
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Make it yours
 
-### Jekyll Themes
+[Fork this repository](https://github.com/epidrome/cover-card/fork) and edit the files to your liking: As a first step, you may want to replace the images and edit the `_config.yml` with your online profiles. You can test the result almost in real-time at the Github Pages url displayed in the Settings tab (gh-pages branch).
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yash1441/yash1441.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Avatar or Logo
 
-### Support or Contact
+The avatar image should be square and at least 200 pixels. Chances are that you have a selfie somewhere in your media storage. If you are making a page for a business or product, then use a logo.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Background image sets the mood
+
+There is no aspect ratio requirement for the background image, but it should be big enough for contemporary (desktop, tablet, phone) computer displays and dark enough in order to work for the white foreground text and icons.
+
+### Social profiles
+
+Edit the `_config.yml` file with your social media profiles by adding the respective account name, not the full link. You can delete or comment out the social media that you don't need.
+
+### Domain name
+
+Github Pages supports free custom domain names, so it is worth buying a domain name and puting it at the settings. If you want to use the theme with you user page (ie. username.github.io), then delete (or rename) your `master branch` and rename your `gh-branch` to `master` #13
+
+### Working example
+
+You can [inspect a working example of the configuration file](https://github.com/epidrome/home/blob/master/_config.yml).
+
+### Updates
+
+Please note that the theme is currently in beta, so some updates at the [master branch](https://github.com/epidrome/cover-card/tree/master) might break your site. Don't panic! 
+
+You can visit [releases](https://github.com/epidrome/cover-card/releases) and check for bugs and new features.
+
+If you wish to keep your theme frozen and not receive updates, then you can [revert your remote_theme to the last known good configuration](https://github.com/benbalter/jekyll-remote-theme):
+
+> You may also optionally specify a branch, tag, or commit to use by appending an @ and the Git ref (e.g., epidrome/cover-card@v0.3). If you don't specify a Git ref, the master branch will be used.
+
+### Expert options
+
+You can find and locally overide advanced options (custom domain name, extra social icons, font styles) for this theme in the documentation (readme) at the [master branch](https://github.com/epidrome/cover-card/tree/master).
+
+## Credits
+
+This page is based on the [cover-card jekyll remote theme](https://github.com/epidrome/cover-card/tree/master).
+
+Background photo by Anders Jildén and avatar photo by Ayo Ogunseinde, both on [Unsplash](https://unsplash.com/)

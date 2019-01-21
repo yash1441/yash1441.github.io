@@ -1,1 +1,39 @@
-theme: jekyll-theme-hacker
+# Theme
+remote_theme: 'epidrome/cover-card'
+
+# Title and tag line
+title: 'My name'
+description: 'I am amazing.'
+
+# Images
+avatar: 'avatar.jpg'
+background: 'background.jpg'
+favicon: 'favicon.ico'
+
+# Online profiles
+dribbble: ''
+facebook: ''
+twitter: ''
+linkedin: ''
+instagram: ''
+pinterest: ''
+youtube: ''
+github-user: ''
+#gitlab-user: ''
+#codepen: ''
+#steam: ''
+#soundcloud: ''
+#lastfm: ''
+#stack-overflow: ''
+#reddit: ''
+#medium:  ''
+#tumblr: ''
+weibo: ''
+vk: ''
+blog_url: ''
+email: ''
+messenger: ''
+
+# Advanced settings
+plugins:
+  - jekyll-remote-theme
