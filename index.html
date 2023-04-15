@@ -1,165 +1,683 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Y-Gaming</title>
-		<link rel="stylesheet" href="layout.css" />
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<!-- <audio src="https://s3-us-west-2.amazonaws.com/nickdesign/CSGO+Menu.mp3" autoplay></audio> -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Y-Gaming</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+  <!-- <video src="images/bg.mp4" autoplay loop playsinline muted></video> -->
 
-		<nav class="flex grow">
-			<ul class="nav__list flex grow justify-center">
-				<i class="fa fa-home list__icon"></i>
-				<li class="list__item flex grow justify-center align-center">PLAY</li>
-				<li class="list__item flex grow justify-center align-center">
-					INVENTORY
-				</li>
-				<li class="list__item flex grow justify-center align-center">WATCH</li>
-				<li class="list__item flex grow justify-center align-center">AWARDS</li>
-				<li class="list__item flex grow justify-center align-center">
-					OPTIONS
-				</li>
-				<i class="list__icon material-icons">power_settings_new</i>
-			</ul>
-		</nav>
+<!-- left navbar -->
 
-		<div class="container flex column grow align-center">
-			<div class="flex grow space-between w100 wrap">
-				<div class="player shadow-alt">
-					<div class="player__header shadow">
-						<div class="flex">
-							<div class="flex column align-center">
-								<img
-									class="player__avatar"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/steam%20avatar%20codepen.jpg"
-								/>
-								<img
-									class="award-icon"
-									style="margin-top: 4px; height: 36px; width: 36px"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/Csgo-rank-level15.png"
-								/>
-							</div>
-							<div class="flex column grow" style="margin-left: 8px">
-								<p class="player__name">Yash Raj Kapoor</p>
-								<div class="flex">
-									<img
-										class="award-icon"
-										src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/Csgo_weaponspecialist_medal1.png"
-									/>
-									<img
-										class="award-icon"
-										src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/Csgo_combatskills_medal2.png"
-									/>
-								</div>
-								<div class="rank-text space-between flex flex-end txt-no-wrap">
-									<div class="flex">
-										<p class="rank txt-lb spacing-half">Master Sergeant</p>
-										<p
-											class="fs-14 txt-lb spacing-half"
-											style="margin-left: 8px"
-										>
-											Rank 15
-										</p>
-									</div>
-									<p class="fs-12 txt-lb spacing-half">Rank 16 + Drop</p>
-								</div>
-								<div class="progress-bar"></div>
-							</div>
-						</div>
-					</div>
-					<div class="player__matches flex space-between align-center">
-						<p class="rounds">Competative Matches Won</p>
+  <div class="left-navbar">
+    <ul>
+      <li onclick="playTab(event, 'dashboard')" class="tablinks">
+      	<img src="images/csgo-logo.png" class="dashboard" alt=""></li>
+      <li onclick="playTab(event, 'play-csgo')" class="tablinks">
+      	<i class="fa fa-play-circle " aria-hidden="true"></i></li>
+      <!-- <li ><i class="fa fa-broadcast-tower" aria-hidden="true"></i></li> -->
+      <li onclick="playTab(event, 'inventory')" class="tablinks"><i class="fa fa-briefcase" aria-hidden="true"></i></li>
+      <li onclick="playTab(event, 'watch')" class="tablinks"><i class="fa fa-tv" aria-hidden="true"></i></li>
+      <li onclick="playTab(event, 'setting')" class="tablinks"><i class="fa fa-cog" aria-hidden="true"></i></li>
+      <li><i class="fa fa-power-off" aria-hidden="true"></i></li>
+    </ul>
+  </div>
+ 
+<!-- Right navbar -->
 
-						<span>
-							<i
-								class="rounds fa fa-trophy"
-								style="font-size: 18px !important"
-							></i>
-							<p class="rounds">27</p>
-						</span>
-					</div>
-				</div>
-				<div class="advertising flex grow shadow-alt">
-					<img
-						src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/CSGO%20Ad.png"
-					/>
-				</div>
-			</div>
+  <div class="right-navbar">
+    <div class="container">
+      <div class="name-sec">
+        <div class="img-avatar">
+          <img src="images/phoenix.png" class="coin-avatar" alt="">
+          <img src="images/avatar.jpg" alt="" class="avatar">
+        </div>
+        <h2>нєłłsиαкє</h2> 
+        <div class="coins">
+          <img src="images/phoenix.png" alt="">
+          <img src="images/bloodhound.png" alt="">
+          <img src="images/broken-fang.png" alt="">
+          <img src="images/years.png" alt="">
+          <img src="images/10years.png" alt="">
+        </div>
+      </div>
 
-			<div class="flex grow space-between w100 wrap">
-				<div class="friends shadow-alt">
-					<div class="friends__header shadow">
-						<div class="total spacing-half grow txt-lb">Friends (33)</div>
-						<div class="lobby spacing-half grow txt-lb">Public Lobbies</div>
-					</div>
-					<div class="friends__list">
-						<div class="friends__friend">
-							<img
-								src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
-								class="friends__avatar"
-							/>
-							<div class="friends__text">
-								<p class="friends__name txt-lb">Nicholas Cage</p>
-								<p class="friends__status txt-lb">Online</p>
-							</div>
-						</div>
+<!-- Private RAnk -->
 
-						<div class="friends__border"></div>
 
-						<div class="friends__friend">
-							<img
-								src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
-								class="friends__avatar"
-							/>
-							<div class="friends__text">
-								<p class="friends__name txt-lb">Nicholas Cage</p>
-								<p class="friends__status txt-lb">Online</p>
-							</div>
-						</div>
-						<div class="friends__border"></div>
-						<div class="friends__friend">
-							<img
-								src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
-								class="friends__avatar"
-							/>
-							<div class="friends__text">
-								<p class="friends__name txt-lb">Nicholas Cage</p>
-								<p class="friends__status txt-lb">Online</p>
-							</div>
-						</div>
+      <div class="rank">
+        <img src="images/rank.png" alt="">
+        <div class="img-avatar">
+          <h3>Captain Rank 23</h3>
+        </div>
+        <div class="progress">
+          <div class="progress-bar">
+          </div>
+        </div>
+      </div>
+<!-- global rank   -->
 
-						<div class="friends__border"></div>
+      <div class="global-rank">
+        <div class="rank-img tooltip">
+          <img src="images/global.png" alt="">
+          <h3>Global Elite</h3>
+          <div class="bottom">
+            <p>In Compitetive Skill Group is used to find matches appropriate for player's skill.</p>
+            <i class="fas fa-trophy"></i> 260 Wins
+        </div>
+          <i class="fa fa-chevron-down" onclick="myFunction()"></i>
+        </div>
+        
+        <div class="rank-img tooltip" id="wingman" style="display: none;">
+          <img src="images/master.png" alt="">
+          <h3>Master Guardian II</h3>
+          <div class="bottom">
+            <p>In Wingman Skill Group is used to find matches appropriate for player's skill.</p>
+            <i class="fas fa-trophy"></i> 46 Wins
+        </div>
+        </div>
 
-						<div class="friends__friend">
-							<img
-								src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
-								class="friends__avatar"
-							/>
-							<div class="friends__text">
-								<p class="friends__name txt-lb">Nicholas Cage</p>
-								<p class="friends__status txt-lb">Online</p>
-							</div>
-						</div>
+      </div>
 
-						<div class="friends__border"></div>
-					</div>
-				</div>
-				<div class="news flex column grow shadow-alt">
-					<div class="news__header shadow">News</div>
-					<div class="news__content">
-						CS:GO's Winter Update 11 DEC 2015 Welcome to the CS:GO Winter
-						Update, filled with holiday cheer. There's something for everyone,
-						including a brand new pistol, a new weapon case, gameplay
-						adjustments, the all-new Killer Replay feature, and more! Click
-						<a href="#">here</a> for the release notes, or read on for more
-						details. R8 Revolver
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+<!-- friends navbar -->
+
+      <div class="friends">
+           <div class="friend-con">
+            <i class="fas fa-user" onclick="toggleUser()"></i>
+            <i class="fas fa-users" onclick="toggleUsers()"></i>
+            <i class="fas fa-history" onclick="toggleHistory()"></i>
+            <i class="fas fa-envelope" onclick="toggleEnv()"></i>
+            <hr id="Indicator">
+          </div>
+    </div>
+<!-- friends list -->
+    <div class="friendlist">
+      <div class="f-list ingame">
+        <img src="images/profile/1.png" alt="">
+        <div class="f-list-p">
+          <p>hK-</p>
+          <p>CS:GO Community Competitive</p>
+        </div>
+      </div>
+    </div>
+    <div class="friendlist">
+      <div class="f-list ingame">
+        <img src="images/profile/2.jpg" alt="">
+        <div class="f-list-p">
+          <p>Hurricane</p>
+          <p>Dust 2 Competitive</p>
+        </div>
+      </div>
+    </div>
+    <div class="friendlist">
+      <div class="f-list">
+        <img src="images/profile/3.jpg" alt="">
+        <div class="f-list-p">
+          <p>Majestic</p>
+          <p>Looking to Trade</p>
+        </div>
+      </div>
+    </div>
+    <div class="friendlist">
+      <div class="f-list">
+        <img src="images/profile/4.jpg" alt="">
+        <div class="f-list-p">
+          <p>Cyber</p>
+          <p>Online</p>
+        </div>
+      </div>
+    </div>
+    <div class="friendlist">
+      <div class="f-list">
+        <img src="images/profile/6.jpg" alt="">
+        <div class="f-list-p">
+          <p>ez</p>
+          <p>Away</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!-- dashboard -->
+  <div class="tabcontent" id="dashboard" style="display: block;">
+  <!-- news section -->
+    <div class="row">
+      <div class="col-1">
+        <div class="news-card">
+          <span>News</span>
+          <img src="images/news.png" alt="">
+          <h3>2021 Service Medal</h3>
+          <p>When you reach Global General (Rank 40), you’ll have the option to reset your Profile Rank and earn (or upgrade) a Service Medal. After January 1, 2021 you’ll be able to receive the new 2021 Service Medal, an inspectable display item that will be visible wherever your avatar is shown.</p>
+          <div class="secnews">
+          <img src="images/news2.png" alt="">
+          <h3>Introducing Operation Broken Fang</h3>
+          <p>New challenges await with the all-new Retakes and the exclusive Broken Fang Premier. Play new maps across a variety of game modes and see how you measure up in the Operation Stats page. </p>
+        </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <img class="orisis" src="images/osiris.png" alt="">
+      </div>
+    </div>
+
+    <!-- market section -->
+    <div class="market-card">
+      <div class="market-head">
+          <p onclick="togglecoupons()">Coupons</p>
+          <p onclick="toggleshop()">Shop</p>
+          <p onclick="togglekeys()">Keys</p>
+          <p onclick="togglemarket()">Market</p>
+      </div>
+      <hr id="Indicator2">
+      <hr id="border">
+      <div class="market-body">
+        <div class="sticker1">
+          <img src="images/sticker1.png" alt="">
+          <p>Dragon Lore </p>
+          <span>$10.0</span>
+        </div>
+        
+        <div class="sticker2">
+          <img src="images/sticker2.png" alt="">
+          <p>Half-Life: Alyx</p>
+          <span>$20.0</span>
+        </div>
+        <div class="sticker3">
+          <img src="images/sticker3.png" alt="">
+          <p>Halo Capsule</p>
+          <span>$30.0</span>
+        </div>
+        <div class="sticker4">
+          <img src="images/sticker4.png" alt="">
+          <p>Howling Dawn</p>
+          <span>$40.0</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- play csgo section -->
+    <section class="play_csgo tabcontent" id="play-csgo" style="display: none;">
+      <div class="play-csgo-container">
+        <div class="play-text">
+          <h1>PLAY</h1>
+        </div>
+        <div class="play-drop-down">
+          <select disabled>
+            <option>Official Matchmaking</option>
+          </select>
+          <img src="images/prime.png" alt="">
+          <h2>PRIME ENABLED</h2>
+        </div>
+        <div class="play-tabs">
+          <span class="active">Competitive</span>
+          <span>Wingman</span>
+          <span>Casual</span>
+          <span>Deathmatch</span>
+          <span>War Games</span>
+          <span>Danger Zone</span>
+          <span>Retakes</span>
+        </div>
+        <div class="play-maps">
+          <h1>Competitive & Scrimmage</h1>
+          <div class="map-card-list">
+            <div class="map-card">
+              <img class="map" src="images/maps/mirage.jpg" alt="">
+              <div class="map-overlay">
+                <div class="map-overlay-icon">
+                  <img src="images/maps/mirage_icon.png" alt="">
+                </div>
+                <div class="map-overlay-title">
+                  <h2>Mirage</h2>
+                </div> 
+                <div class="map-overlay-wait">
+                  <p>wait time 3:32</p>
+                </div>
+              </div>
+            </div>
+            <div class="map-card">
+              <img class="map" src="images/maps/inferno.jpg" alt="">
+              <div class="map-overlay">
+                <div class="map-overlay-icon">
+                  <img src="images/maps/inferno_icon.png" alt="">
+                </div>
+                <div class="map-overlay-title">
+                  <h2>Inferno</h2>
+                </div> 
+                <div class="map-overlay-wait">
+                  <p>wait time 3:32</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-card">
+              <img class="map" src="images/maps/overpass.png" alt="">
+              <div class="map-overlay">
+                <div class="map-overlay-icon">
+                  <img src="images/maps/overpass_icon.png" alt="">
+                </div>
+                <div class="map-overlay-title">
+                  <h2>Overpass</h2>
+                </div> 
+                <div class="map-overlay-wait">
+                  <p>wait time 3:32</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-card">
+              <img class="map" src="images/maps/cache.jpg" alt="">
+              <div class="map-overlay">
+                <div class="map-overlay-icon">
+                  <img src="images/maps/cache_icon.png" alt="">
+                </div>
+                <div class="map-overlay-title">
+                  <h2>Cache</h2>
+                </div> 
+                <div class="map-overlay-wait">
+                  <p>wait time 3:32</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-card">
+              <img class="map" src="images/maps/nuke.jpg" alt="">
+              <div class="map-overlay">
+                <div class="map-overlay-icon">
+                  <img src="images/maps/cobble_icon.png" alt="">
+                </div>
+                <div class="map-overlay-title">
+                  <h2>Cobble</h2>
+                </div> 
+                <div class="map-overlay-wait">
+                  <p>wait time 3:32</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-card">
+              <img class="map" src="images/maps/train.png" alt="">
+              <div class="map-overlay">
+                <div class="map-overlay-icon">
+                  <img src="images/maps/train_icon.png" alt="">
+                </div>
+                <div class="map-overlay-title">
+                  <h2>Train</h2>
+                </div> 
+                <div class="map-overlay-wait">
+                  <p>wait time 3:32</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="play-go">
+        	<span><i class="fa fa-unlock"></i> FRIENDS CAN JOIN</span>
+        	<button>GO</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- inventory -->
+    <section class="inventory tabcontent" id="inventory" style="display: none;">
+      <div class="play-csgo-container">
+        <div class="play-text">
+          <h1>INVENTORY</h1>
+        </div>
+        <div class="play-drop-down">
+          <select disabled>
+            <option>EVERYTHING</option>
+          </select>
+          <h2>Search items</h2>
+          <h2>Loudout</h2>
+          <h2>Trade Up</h2>
+          <h2>Market</h2>
+        </div>
+        <div class="play-tabs">
+          <span class="active">Everything</span>
+          <span>Quality <i class="fa fa-chevron-down"></i> </span>
+        </div>
+        <div class="play-maps">
+          <div class="map-card-list">
+            <div class="inventory-card">
+              <img src="images/loyal.png" class="red-item">  
+              <p>Loyality Badge</p>            
+            </div>
+            <div class="inventory-card">
+              <img src="images/inventory/assimov.png" class="red-item">  
+              <p>AWP Assimov</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/ak47.png" class="red-item">  
+              <p>AK 47 Wasteland</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/bowie.png" class="red-item">  
+              <p>Bowie Knife</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/karambit.png" class="red-item">  
+              <p>Karambit</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/dragon lore.png" class="red-item">  
+              <p>AWP Dragon Lore</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/glock.png" class="red-item">  
+              <p>Water Element</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/deagle.png" class="voilet-item">  
+              <p>Deagle Blaze</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/key.png" class="grey-item">  
+              <p>Key</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/sticker.png" class="grey-item">  
+              <p>Global Sticker</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/case.png" class="grey-item">  
+              <p>Chroma Case</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/Venom.png" class="grey-item">  
+              <p>Venom Case</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/gg.png" class="grey-item">  
+              <p>GG</p>            
+            </div>
+
+            <div class="inventory-card">
+              <img src="images/inventory/grafitti.png" class="grey-item">  
+              <p>Graffitti</p>            
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- watch -->
+    <section class="watch tabcontent" id="watch" style="display: none;">
+      <div class="play-csgo-container">
+        <div class="play-text">
+          <h1>WATCH</h1>
+        </div>
+        <div class="play-tabs">
+          <span >Majors</span>
+          <span class="active">Your Matches</span>
+          <span >Downloaded</span>
+          <span ">Live</span>
+          <span ">Streams</span>
+          <span >Events</span>
+          <span class="reload"><i class="fa fa-redo-alt"></i> </span>
+        </div>
+        <div class="play-maps">
+          <div class="left-match-score">
+            <div class="two-col">
+              <div class="score-column loss">
+                <div class="left-col  active">
+                  <img src="images/maps/cache_icon.png" alt="">
+                  <span>Cache</span>
+                </div>
+                <div class="right-col">
+                  <h1><span class="blue-score">7</span> - <span class="yellow-score">16</span></h1>
+                  <p>Sunday, 03:11</p>
+                  <p>Loss</p>
+                </div>
+              </div>
+
+              <div class="score-column victory">
+              <div class="left-col ">
+                <img src="images/maps/mirage_icon.png" alt="">
+                <span>Mirage</span>
+              </div>
+              <div class="right-col">
+                <h1><span class="blue-score">16</span> - <span class="yellow-score">10</span></h1>
+                <p>Monday, 02:14</p>
+                <p>Victory</p>
+              </div>
+            </div>
+
+            <div class="score-column victory">
+              <div class="left-col ">
+                <img src="images/maps/nuke_icon.png" alt="">
+                <span>Nuke</span>
+              </div>
+              <div class="right-col">
+                <h1><span class="blue-score">16</span> - <span class="yellow-score">5</span></h1>
+                <p>Wednesday, 09:25</p>
+                <p>Victory</p>
+              </div>
+            </div>
+          </div>
+          </div>
+            <div class="score-board-container">
+              <div class="score-board-header">
+                <img src="images/maps/cache_icon.png" alt="">
+                <h1>Map <br>Cache</h1>
+                <h1>Duration <br>34&#160;Minutes</h1>
+                <h1>Date <br>Sunday,&#160;03,11</h1>
+              </div>
+
+              <div class="score-board">
+                <table class="tftable" border="1">
+                  <tr>
+                    <td class="image-td"><img src="images/avatar.jpg" alt=""></td>
+                    <td class="name-td">нєłłsиαкє</td>
+                    <td>21</td>
+                    <td>2</td>
+                    <td>17</td>
+                    <td><i class="fas fa-star"></i></td>
+                    <td>56</td>
+                 </tr>
+                  <tr>
+                    <td class="image-td"><img src="images/profile/1.png" alt=""></td>
+                    <td>ez</td>
+                    <td>17</td>
+                    <td>0</td>
+                    <td>21</td>
+                    <td><i class="fas fa-star"></i></td>
+                    <td>35</td>
+                  </tr>
+                  <tr>
+                    <td class="image-td"><img src="images/profile/2.jpg" alt=""></td>
+                    <td>hK-</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>19</td>
+                    <td><i class="fas fa-star"></i></td>
+                    <td>27</td>
+                  </tr>
+                  <tr>
+                    <td class="image-td"><img src="images/profile/3.jpg" alt=""></td>
+                    <td>Hurricane</td>
+                    <td>9</td>
+                    <td>4</td>
+                    <td>20</td>
+                    <td><i class="fas fa-star"></i></td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td class="image-td"><img src="images/profile/4.jpg" alt=""></td>
+                    <td>Majestic</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>17</td>
+                    <td><i class="fas fa-star"></i></td>
+                    <td>16</td>
+                  </tr>
+               </table>
+
+               <table class="tftable" border="1">
+                <tr>
+                  <td class="image-td"><img src="images/avatar.jpg" alt=""></td>
+                  <td class="name-td">нєłłsиαкє</td>
+                  <td>21</td>
+                  <td>2</td>
+                  <td>17</td>
+                  <td><i class="fas fa-star"></i></td>
+                  <td>56</td>
+               </tr>
+                <tr>
+                  <td class="image-td"><img src="images/profile/1.png" alt=""></td>
+                  <td>ez</td>
+                  <td>17</td>
+                  <td>0</td>
+                  <td>21</td>
+                  <td><i class="fas fa-star"></i></td>
+                  <td>35</td>
+                </tr>
+                <tr>
+                  <td class="image-td"><img src="images/profile/2.jpg" alt=""></td>
+                  <td>hK-</td>
+                  <td>13</td>
+                  <td>1</td>
+                  <td>19</td>
+                  <td><i class="fas fa-star"></i></td>
+                  <td>27</td>
+                </tr>
+                <tr>
+                  <td class="image-td"><img src="images/profile/3.jpg" alt=""></td>
+                  <td>Hurricane</td>
+                  <td>9</td>
+                  <td>4</td>
+                  <td>20</td>
+                  <td><i class="fas fa-star"></i></td>
+                  <td>22</td>
+                </tr>
+                <tr>
+                  <td class="image-td"><img src="images/profile/4.jpg" alt=""></td>
+                  <td>Majestic</td>
+                  <td>4</td>
+                  <td>4</td>
+                  <td>17</td>
+                  <td><i class="fas fa-star"></i></td>
+                  <td>16</td>
+                </tr>
+             </table>
+              </div>
+            
+            </div>
+            <div class="play-go">
+              <button>Download</button>
+            </div>
+          </div>
+          
+        </div>
+    </section>
+
+    <!-- setting -->
+
+    <section class="setting tabcontent" id="setting" style="display: none;">
+      <div class="play-csgo-container">
+        <div class="play-text">
+          <h1>GAME SETTINGS</h1>
+        </div>
+        <div class="play-tabs">
+          <span >New</span>
+          <span class="active">Video</span>
+          <span >Audio</span>
+          <span ">Games</span>
+          <span ">Keyboard / Mouse</span>
+          <span >Controller</span>
+          <span > <i class="fa fa-search"></i> Search</span>
+        </div>
+        <div class="play-tabs">
+          <span>Video</span>
+          <span>Advance Video</span>
+          <span>HUD Edge Position</span>
+        </div>
+        <div class="play-maps">
+          <div class="setting-video">
+            <div class="video-header">
+              <h1>Video</h1>
+            </div>
+              <div class="video-list-setting">
+                <table class="tftable">
+                  <tr>
+                        <td class="name-td">Main Menu Background Scenery</td>
+                        <td>Nuke <i class="fas fa-chevron-down"></i></td>
+                    </tr>
+                    <tr>
+                      <td class="name-td">Color Mode</td>
+                      <td>Computer Monitor</td>
+                  </tr>
+                  <tr>
+                    <td class="name-td">Aspect Ratio</td>
+                    <td>WIDESCREEN 16:9 <i class="fas fa-chevron-down"></i></td>
+                </tr>
+                <tr>
+                  <td class="name-td">Resolution</td>
+                  <td>1920x1080 <i class="fas fa-chevron-down"></i></td>
+              </tr>
+              <tr>
+                <td class="name-td">Display Mode</td>
+                <td><select disabled>
+                  <option>FULLSCREEN</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td class="name-td">Laptop Power Saving</td>
+              <td>DISABLED <i class="fas fa-chevron-down"></i></td>
+          </tr>
+
+               </table>
+              </div>
+          </div>
+
+          <div class="setting-video">
+            <div class="video-header">
+              <h1>Advance Video</h1>
+            </div>
+              <div class="video-list-setting">
+                <table class="tftable">
+                  <tr>
+                        <td class="name-td">Global Shadow Quaity</td>
+                        <td>VERY LOW <i class="fas fa-chevron-down"></i></td>
+                    </tr>
+                    <tr>
+                      <td class="name-td">Model / Texture Detail</td>
+                      <td>LOW <i class="fas fa-chevron-down"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="name-td">Texture Streaming</td>
+                    <td>DISABLED <i class="fas fa-chevron-down"></i></td>
+                </tr>
+               </table>
+              </div>
+            
+          </div>
+        </div>
+        <div class="play-go">
+          <span><i class="fa fa-history"></i> RESET DEFAULTS</span>
+          <span>DISCARD CHANGES</span>
+          <span>APPLY CHANGES</span>
+        </div>
+      </div>
+    </section>
+
+<script src="script.js"></script>
+</body>
 </html>
