@@ -56,3 +56,20 @@ function playTab(evt, tabname) {
 	document.getElementById(tabname).style.display = "block";
 	evt.currentTarget.className += " active";
 }
+
+const audio = document.getElementById("my-audio");
+const muteButton = document.getElementById("mute-button");
+
+muteButton.addEventListener("click", function () {
+	if (audio.muted) {
+		audio.muted = false;
+		audio.volume = 0.1;
+		audio.play();
+		muteButton.classList.remove("fa-volume-mute");
+		muteButton.classList.add("fa-volume-up");
+	} else {
+		audio.muted = true;
+		muteButton.classList.remove("fa-volume-up");
+		muteButton.classList.add("fa-volume-mute");
+	}
+});
