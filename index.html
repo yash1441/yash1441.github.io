@@ -1,145 +1,161 @@
-<audio
-	src="https://s3-us-west-2.amazonaws.com/nickdesign/CSGO+Menu.mp3"
-	autoplay
-></audio>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Y-Gaming</title>
+		<link rel="stylesheet" href="layout.css" />
+	</head>
+	<body>
+		<!-- <audio src="https://s3-us-west-2.amazonaws.com/nickdesign/CSGO+Menu.mp3" autoplay></audio> -->
 
-<nav class="flex grow">
-	<ul class="nav__list flex grow justify-center">
-		<i class="fa fa-home list__icon"></i>
-		<li class="list__item flex grow justify-center align-center">PLAY</li>
-		<li class="list__item flex grow justify-center align-center">INVENTORY</li>
-		<li class="list__item flex grow justify-center align-center">WATCH</li>
-		<li class="list__item flex grow justify-center align-center">AWARDS</li>
-		<li class="list__item flex grow justify-center align-center">OPTIONS</li>
-		<i class="list__icon material-icons">power_settings_new</i>
-	</ul>
-</nav>
+		<nav class="flex grow">
+			<ul class="nav__list flex grow justify-center">
+				<i class="fa fa-home list__icon"></i>
+				<li class="list__item flex grow justify-center align-center">PLAY</li>
+				<li class="list__item flex grow justify-center align-center">
+					INVENTORY
+				</li>
+				<li class="list__item flex grow justify-center align-center">WATCH</li>
+				<li class="list__item flex grow justify-center align-center">AWARDS</li>
+				<li class="list__item flex grow justify-center align-center">
+					OPTIONS
+				</li>
+				<i class="list__icon material-icons">power_settings_new</i>
+			</ul>
+		</nav>
 
-<div class="container flex column grow align-center">
-	<div class="flex grow space-between w100 wrap">
-		<div class="player shadow-alt">
-			<div class="player__header shadow">
-				<div class="flex">
-					<div class="flex column align-center">
-						<img
-							class="player__avatar"
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/steam%20avatar%20codepen.jpg"
-						/>
-						<img
-							class="award-icon"
-							style="margin-top: 4px; height: 36px; width: 36px"
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/Csgo-rank-level15.png"
-						/>
-					</div>
-					<div class="flex column grow" style="margin-left: 8px">
-						<p class="player__name">Yash Raj Kapoor</p>
+		<div class="container flex column grow align-center">
+			<div class="flex grow space-between w100 wrap">
+				<div class="player shadow-alt">
+					<div class="player__header shadow">
 						<div class="flex">
-							<img
-								class="award-icon"
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/Csgo_weaponspecialist_medal1.png"
-							/>
-							<img
-								class="award-icon"
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/Csgo_combatskills_medal2.png"
-							/>
-						</div>
-						<div class="rank-text space-between flex flex-end txt-no-wrap">
-							<div class="flex">
-								<p class="rank txt-lb spacing-half">Master Sergeant</p>
-								<p class="fs-14 txt-lb spacing-half" style="margin-left: 8px">
-									Rank 15
-								</p>
+							<div class="flex column align-center">
+								<img
+									class="player__avatar"
+									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/steam%20avatar%20codepen.jpg"
+								/>
+								<img
+									class="award-icon"
+									style="margin-top: 4px; height: 36px; width: 36px"
+									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/Csgo-rank-level15.png"
+								/>
 							</div>
-							<p class="fs-12 txt-lb spacing-half">Rank 16 + Drop</p>
+							<div class="flex column grow" style="margin-left: 8px">
+								<p class="player__name">Yash Raj Kapoor</p>
+								<div class="flex">
+									<img
+										class="award-icon"
+										src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/Csgo_weaponspecialist_medal1.png"
+									/>
+									<img
+										class="award-icon"
+										src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/Csgo_combatskills_medal2.png"
+									/>
+								</div>
+								<div class="rank-text space-between flex flex-end txt-no-wrap">
+									<div class="flex">
+										<p class="rank txt-lb spacing-half">Master Sergeant</p>
+										<p
+											class="fs-14 txt-lb spacing-half"
+											style="margin-left: 8px"
+										>
+											Rank 15
+										</p>
+									</div>
+									<p class="fs-12 txt-lb spacing-half">Rank 16 + Drop</p>
+								</div>
+								<div class="progress-bar"></div>
+							</div>
 						</div>
-						<div class="progress-bar"></div>
+					</div>
+					<div class="player__matches flex space-between align-center">
+						<p class="rounds">Competative Matches Won</p>
+
+						<span>
+							<i
+								class="rounds fa fa-trophy"
+								style="font-size: 18px !important"
+							></i>
+							<p class="rounds">27</p>
+						</span>
 					</div>
 				</div>
+				<div class="advertising flex grow shadow-alt">
+					<img
+						src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/CSGO%20Ad.png"
+					/>
+				</div>
 			</div>
-			<div class="player__matches flex space-between align-center">
-				<p class="rounds">Competative Matches Won</p>
 
-				<span>
-					<i class="rounds fa fa-trophy" style="font-size: 18px !important"></i>
-					<p class="rounds">27</p>
-				</span>
+			<div class="flex grow space-between w100 wrap">
+				<div class="friends shadow-alt">
+					<div class="friends__header shadow">
+						<div class="total spacing-half grow txt-lb">Friends (33)</div>
+						<div class="lobby spacing-half grow txt-lb">Public Lobbies</div>
+					</div>
+					<div class="friends__list">
+						<div class="friends__friend">
+							<img
+								src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
+								class="friends__avatar"
+							/>
+							<div class="friends__text">
+								<p class="friends__name txt-lb">Nicholas Cage</p>
+								<p class="friends__status txt-lb">Online</p>
+							</div>
+						</div>
+
+						<div class="friends__border"></div>
+
+						<div class="friends__friend">
+							<img
+								src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
+								class="friends__avatar"
+							/>
+							<div class="friends__text">
+								<p class="friends__name txt-lb">Nicholas Cage</p>
+								<p class="friends__status txt-lb">Online</p>
+							</div>
+						</div>
+						<div class="friends__border"></div>
+						<div class="friends__friend">
+							<img
+								src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
+								class="friends__avatar"
+							/>
+							<div class="friends__text">
+								<p class="friends__name txt-lb">Nicholas Cage</p>
+								<p class="friends__status txt-lb">Online</p>
+							</div>
+						</div>
+
+						<div class="friends__border"></div>
+
+						<div class="friends__friend">
+							<img
+								src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
+								class="friends__avatar"
+							/>
+							<div class="friends__text">
+								<p class="friends__name txt-lb">Nicholas Cage</p>
+								<p class="friends__status txt-lb">Online</p>
+							</div>
+						</div>
+
+						<div class="friends__border"></div>
+					</div>
+				</div>
+				<div class="news flex column grow shadow-alt">
+					<div class="news__header shadow">News</div>
+					<div class="news__content">
+						CS:GO's Winter Update 11 DEC 2015 Welcome to the CS:GO Winter
+						Update, filled with holiday cheer. There's something for everyone,
+						including a brand new pistol, a new weapon case, gameplay
+						adjustments, the all-new Killer Replay feature, and more! Click
+						<a href="#">here</a> for the release notes, or read on for more
+						details. R8 Revolver
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="advertising flex grow shadow-alt">
-			<img
-				src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/CSGO%20Ad.png"
-			/>
-		</div>
-	</div>
-
-	<div class="flex grow space-between w100 wrap">
-		<div class="friends shadow-alt">
-			<div class="friends__header shadow">
-				<div class="total spacing-half grow txt-lb">Friends (33)</div>
-				<div class="lobby spacing-half grow txt-lb">Public Lobbies</div>
-			</div>
-			<div class="friends__list">
-				<div class="friends__friend">
-					<img
-						src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
-						class="friends__avatar"
-					/>
-					<div class="friends__text">
-						<p class="friends__name txt-lb">Nicholas Cage</p>
-						<p class="friends__status txt-lb">Online</p>
-					</div>
-				</div>
-
-				<div class="friends__border"></div>
-
-				<div class="friends__friend">
-					<img
-						src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
-						class="friends__avatar"
-					/>
-					<div class="friends__text">
-						<p class="friends__name txt-lb">Nicholas Cage</p>
-						<p class="friends__status txt-lb">Online</p>
-					</div>
-				</div>
-				<div class="friends__border"></div>
-				<div class="friends__friend">
-					<img
-						src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
-						class="friends__avatar"
-					/>
-					<div class="friends__text">
-						<p class="friends__name txt-lb">Nicholas Cage</p>
-						<p class="friends__status txt-lb">Online</p>
-					</div>
-				</div>
-
-				<div class="friends__border"></div>
-
-				<div class="friends__friend">
-					<img
-						src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/58/58892d1173626e9b3d41afd3fd2e952d66b8ee8e_full.jpg"
-						class="friends__avatar"
-					/>
-					<div class="friends__text">
-						<p class="friends__name txt-lb">Nicholas Cage</p>
-						<p class="friends__status txt-lb">Online</p>
-					</div>
-				</div>
-
-				<div class="friends__border"></div>
-			</div>
-		</div>
-		<div class="news flex column grow shadow-alt">
-			<div class="news__header shadow">News</div>
-			<div class="news__content">
-				CS:GO's Winter Update 11 DEC 2015 Welcome to the CS:GO Winter Update,
-				filled with holiday cheer. There's something for everyone, including a
-				brand new pistol, a new weapon case, gameplay adjustments, the all-new
-				Killer Replay feature, and more! Click
-				<a href="#">here</a> for the release notes, or read on for more details.
-				R8 Revolver
-			</div>
-		</div>
-	</div>
-</div>
+	</body>
+</html>
