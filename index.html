@@ -11,8 +11,17 @@
 </head>
 <body>
   <!-- <video src="images/bg.mp4" autoplay loop playsinline muted></video> -->
-  <audio id="my-audio" autoplay muted>
+  <audio id="mainmenu" autoplay muted>
     <source src="sounds/mainmenu.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="submenuhover" autoplay preload="auto">
+    <source src="sounds/submenu_hover.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="submenusubhover" autoplay>
+    <source src="sounds/submenu_subhover.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="submenusubselect" autoplay>
+    <source src="sounds/submenu_subselect.mp3" type="audio/mpeg">
   </audio>
 <!-- left navbar -->
 
@@ -33,7 +42,7 @@
  
 <!-- Right navbar -->
 
-  <div class="right-navbar">
+  <div class="right-navbar" id="right-navbar">
     <div class="container">
       <div class="name-sec">
         <div class="img-avatar">
@@ -91,10 +100,10 @@
 
       <div class="friends">
            <div class="friend-con">
-            <i class="fas fa-user" onclick="toggleUser()"></i>
-            <i class="fas fa-users" onclick="toggleUsers()"></i>
-            <i class="fas fa-history" onclick="toggleHistory()"></i>
-            <i class="fas fa-envelope" onclick="toggleEnv()"></i>
+            <i class="fas fa-user" id="submenu-option1" onclick="toggleUser()"></i>
+            <i class="fas fa-users" id="submenu-option2" onclick="toggleUsers()"></i>
+            <i class="fas fa-history" id="submenu-option3" onclick="toggleHistory()"></i>
+            <i class="fas fa-envelope" id="submenu-option4" onclick="toggleEnv()"></i>
             <hr id="Indicator">
           </div>
       </div>
