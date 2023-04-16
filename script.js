@@ -27,6 +27,7 @@ function toggleUser() {
 	friends.style.display = "block";
 	groups.style.display = "none";
 	contacts.style.display = "none";
+	submenusubselectAudio.currentTime = 0;
 	submenusubselectAudio.play();
 }
 function toggleUsers() {
@@ -37,6 +38,7 @@ function toggleUsers() {
 	groups.style.display = "block";
 	friends.style.display = "none";
 	contacts.style.display = "none";
+	submenusubselectAudio.currentTime = 0;
 	submenusubselectAudio.play();
 }
 function toggleHistory() {
@@ -47,6 +49,7 @@ function toggleHistory() {
 	groups.style.display = "none";
 	friends.style.display = "none";
 	contacts.style.display = "none";
+	submenusubselectAudio.currentTime = 0;
 	submenusubselectAudio.play();
 }
 function toggleEnv() {
@@ -57,6 +60,7 @@ function toggleEnv() {
 	groups.style.display = "none";
 	friends.style.display = "none";
 	contacts.style.display = "block";
+	submenusubselectAudio.currentTime = 0;
 	submenusubselectAudio.play();
 }
 
