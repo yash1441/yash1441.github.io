@@ -313,22 +313,23 @@ body {
 	transform: translateX(8px);
 }
 
-/*  friends list */
+/* stuff list */
 
-.friendlist {
+.stufflist {
 	display: block;
 	margin: 0;
 	padding: 0;
 }
-.f-list {
+
+.stuff-list {
 	display: flex;
 }
 
-.f-list:hover {
+.stuff-list:hover {
 	background: rgba(255, 255, 255, 0.1);
 }
 
-.f-list img {
+.stuff-list img {
 	width: 50px;
 	height: 50px;
 	margin: 10px;
@@ -363,19 +364,27 @@ body {
 	border-left: 4px solid rgb(23, 21, 21);
 }
 
-.ingame img {
-	border-left: 4px solid rgb(27, 139, 52);
+.discord img {
+	border-left: 4px solid rgb(114, 137, 218);
 }
 
-.f-list-p p {
+.discord img {
+	border-left: 4px solid rgb(114, 137, 218);
+}
+
+.email img {
+	border-left: 4px solid rgb(36, 30, 32);
+}
+
+.whatsapp img {
+	border-left: 4px solid rgb(73, 200, 87);
+}
+
+.stuff-list-p p {
 	margin: 10px 5px;
 	padding: 0;
 	color: white;
 	font-size: 0.8rem;
-}
-.f-list-p p:last-child {
-	font-size: 0.7rem;
-	color: rgba(255, 255, 255, 0.6);
 }
 
 /* news section */

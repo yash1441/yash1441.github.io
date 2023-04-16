@@ -11,15 +11,39 @@ const Indicator = document.getElementById("Indicator");
 
 function toggleUser() {
 	Indicator.style.transform = "translateX(8px)";
+	var friends = document.getElementById("friends");
+	var groups = document.getElementById("groups");
+	var contacts = document.getElementById("contacts");
+	friends.style.display = "block";
+	groups.style.display = "none";
+	contacts.style.display = "none";
 }
 function toggleUsers() {
 	Indicator.style.transform = "translateX(66px)";
+	var friends = document.getElementById("friends");
+	var groups = document.getElementById("groups");
+	var contacts = document.getElementById("contacts");
+	groups.style.display = "block";
+	friends.style.display = "none";
+	contacts.style.display = "none";
 }
 function toggleHistory() {
 	Indicator.style.transform = "translateX(128px)";
+	var friends = document.getElementById("friends");
+	var groups = document.getElementById("groups");
+	var contacts = document.getElementById("contacts");
+	groups.style.display = "none";
+	friends.style.display = "none";
+	contacts.style.display = "none";
 }
 function toggleEnv() {
 	Indicator.style.transform = "translateX(185px)";
+	var friends = document.getElementById("friends");
+	var groups = document.getElementById("groups");
+	var contacts = document.getElementById("contacts");
+	groups.style.display = "none";
+	friends.style.display = "none";
+	contacts.style.display = "block";
 }
 
 //market toggle
