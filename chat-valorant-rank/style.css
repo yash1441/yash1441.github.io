@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex; /* Added for vertical centering */
+    justify-content: center; /* Added for vertical centering */
+    min-height: 100vh; /* Added for full viewport height */
+  }
+
+.container {
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+.form-group {
+	margin-bottom: 10px;
+}
+
+label {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+#nameTag {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#generatedUrl {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+#exampleResponse {
+	font-weight: bold;
+	margin-top: 20px;
+}

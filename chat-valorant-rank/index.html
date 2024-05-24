@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Chat-Valorant-Rank</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Chat-Valorant-Rank</h1>
+			<div class="form-group">
+				<input
+					type="text"
+					id="nameTag"
+					placeholder="Enter Name#Tag"
+					required
+				/>
+			</div>
+            <div class="form-group">
+				<label for="region">Region:</label>
+				<select id="region">
+					<option value="ap">Asia/Pacific</option>
+					<option value="br">Brazil</option>
+					<option value="eu">Europe</option>
+					<option value="kr">Korea</option>
+                    <option value="latam">Latin America</option>
+                    <option value="na">North America</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="hideUsername">Hide username in response</label>
+				<input type="checkbox" id="hideUsername" />
+			</div>
+			<div class="form-group">
+				<label for="showRRChange">Show RR change in response</label>
+				<input type="checkbox" id="showRRChange" />
+			</div>
+			<div class="form-group">
+				<label for="platform">Platform:</label>
+				<select id="platform">
+					<option value="streamelements">StreamElements</option>
+					<option value="nightbot">NightBot</option>
+					<option value="fossabot">Fossabot</option>
+					<option value="others">Others</option>
+				</select>
+			</div>
+			<button id="generateButton">Generate</button>
+			<p id="generatedUrl"></p>
+            <!-- <p id="exampleResponse"></p> -->
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
