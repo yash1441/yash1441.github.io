@@ -5,6 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Chat-Valorant-Rank</title>
 		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 	</head>
 	<body>
 		<div class="container">
@@ -17,15 +24,15 @@
 					required
 				/>
 			</div>
-            <div class="form-group">
+			<div class="form-group">
 				<label for="region">Region:</label>
 				<select id="region">
 					<option value="ap">Asia/Pacific</option>
 					<option value="br">Brazil</option>
 					<option value="eu">Europe</option>
 					<option value="kr">Korea</option>
-                    <option value="latam">Latin America</option>
-                    <option value="na">North America</option>
+					<option value="latam">Latin America</option>
+					<option value="na">North America</option>
 				</select>
 			</div>
 			<div class="form-group">
@@ -46,8 +53,11 @@
 				</select>
 			</div>
 			<button id="generateButton">Generate</button>
-			<p id="generatedUrl"></p>
-            <!-- <p id="exampleResponse"></p> -->
+            <div id="generatedTextContainer">
+                <p id="generatedUrl"></p>
+                <i class="fas fa-copy" id="copyIcon"></i> </div>
+            </div>
+			<!-- <p id="exampleResponse"></p> -->
 		</div>
 		<script src="script.js"></script>
 	</body>

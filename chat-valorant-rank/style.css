@@ -1,11 +1,11 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 20px;
-    display: flex; /* Added for vertical centering */
-    justify-content: center; /* Added for vertical centering */
-    min-height: 100vh; /* Added for full viewport height */
-  }
+	font-family: sans-serif;
+	margin: 0;
+	padding: 20px;
+	display: flex; /* Added for vertical centering */
+	justify-content: center; /* Added for vertical centering */
+	min-height: 100vh; /* Added for full viewport height */
+}
 
 .container {
 	text-align: center;
@@ -34,6 +34,16 @@ label {
 #generatedUrl {
 	font-weight: bold;
 	margin-top: 20px;
+}
+
+#generatedTextContainer {
+	display: flex; /* Added for inline display of text and icon */
+	align-items: center; /* Added for vertical alignment of icon */
+}
+
+#copyIcon {
+	cursor: pointer; /* Set cursor to pointer on hover */
+	margin-left: 10px; /* Add margin for spacing */
 }
 
 #exampleResponse {
