@@ -6,24 +6,32 @@ const platformSelect = document.getElementById('platform');
 const generateButton = document.getElementById('generateButton');
 const generatedUrl = document.getElementById('generatedUrl');
 const copyIcon = document.getElementById('copyIcon');
-// const exampleResponse = document.getElementById('exampleResponse');
+const exampleResponse = document.getElementById('exampleResponse');
 
-copyIcon.style.display = 'none';
+copyIcon.style.display = "none";
 
-generateButton.addEventListener('click', function () {
-    let url = "https://splendid-groovy-feverfew.glitch.me/valorant";
-    url += "/" + regionSelect.value;
-
+generateButton.addEventListener("click", function () {
     if (!nameTagInput.value.includes("#")) return alert("Please enter a valid username in the format Name#Tag");
 
-    const name = encodeURIComponent(nameTagInput.value.split("#")[0].replace(' ', ''));
-    const tag = encodeURIComponent(nameTagInput.value.split("#")[1]);
+    const queryData = {
+        username: nameTagInput,
+        name: nameTagInput.value.split("#")[0],
+        tag: nameTagInput.value.split("#")[1],
+        region: regionSelect.value,
+        onlyRank: hideUsernameCheckbox.checked,
+        mmrChange: showRRChangeCheckbox.checked
+    };
 
-    url += "/" + name + "/" + tag;
+    const fixedName = encodeURIComponent(queryData.name.replace(' ', ''));
+    const fixedTag = encodeURIComponent(queryData.tag);
 
-    if (hideUsernameCheckbox.checked && showRRChangeCheckbox.checked) url += "?onlyRank=true&mmrChange=true";
-    else if (hideUsernameCheckbox.checked) url += "?onlyRank=true";
-    else if (showRRChangeCheckbox.checked) url += "?mmrChange=true";
+    let url = "https://splendid-groovy-feverfew.glitch.me/valorant";
+    url += "/" + queryData.region;
+    url += "/" + fixedName + "/" + fixedTag;
+
+    if (queryData.onlyRank && queryData.mmrChange) url += "?onlyRank=true&mmrChange=true";
+    else if (queryData.onlyRank) url += "?onlyRank=true";
+    else if (queryData.mmrChange) url += "?mmrChange=true";
 
     switch (platformSelect.value) {
         case "streamelements":
@@ -39,11 +47,28 @@ generateButton.addEventListener('click', function () {
             generatedUrl.textContent = url;
     }
 
-    copyIcon.style.display = 'inline-block';
+    copyIcon.style.display = "inline-block";
+
+    exampleResponse.textContent = "Generating response...";
+    setExample(queryData);
 });
 
 copyIcon.addEventListener('click', function () {
-    const generatedText = document.getElementById('generatedUrl');
-    if (generatedText.length <= 0) return;
-    navigator.clipboard.writeText(generatedText.textContent)
+    if (generatedUrl.length <= 0) return;
+    navigator.clipboard.writeText(generatedUrl.textContent);
 });
+
+function setExample(queryData) {
+    fetch(`https://api.henrikdev.xyz/valorant/v1/mmr/${regionSelect.value}/${name}/${tag}?api_key=${process.env.BASE_KEY}`)
+        .then(response => response.json())
+        .then(data => {
+            let buffer = '';
+            if (!data.onlyRank) {
+                buffer += queryData.username;
+                buffer += " [" + data.data.currenttier + "]";
+            }
+            else buffer += data.data.currenttierpatched;
+            if (queryData.mmrChange) buffer += " [" + data.data.mmr_change_to_last_game + "]";
+            exampleResponse.textContent = buffer;
+        })
+}

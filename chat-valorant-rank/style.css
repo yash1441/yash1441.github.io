@@ -41,6 +41,12 @@ label {
 	align-items: center; /* Added for vertical alignment of icon */
 }
 
+#exampleTextContainer {
+	display: flex; /* Added for inline display of text and icon */
+	align-items: center; /* Added for vertical alignment of icon */
+	clear: both;
+}
+
 #copyIcon {
 	cursor: pointer; /* Set cursor to pointer on hover */
 	margin-left: 10px; /* Add margin for spacing */
