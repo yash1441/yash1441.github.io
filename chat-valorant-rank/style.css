@@ -34,6 +34,11 @@ label {
 #generatedUrl {
 	font-weight: bold;
 	margin-top: 20px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: lightgrey;
+	color: black;
 }
 
 #generatedTextContainer {
@@ -41,10 +46,12 @@ label {
 	align-items: center; /* Added for vertical alignment of icon */
 }
 
-#exampleTextContainer {
-	display: flex; /* Added for inline display of text and icon */
-	align-items: center; /* Added for vertical alignment of icon */
-	clear: both;
+#exampleResponse {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: blueviolet;
+	color: white;
 }
 
 #copyIcon {

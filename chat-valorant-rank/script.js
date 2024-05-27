@@ -8,7 +8,9 @@ const generatedUrl = document.getElementById('generatedUrl');
 const copyIcon = document.getElementById('copyIcon');
 const exampleResponse = document.getElementById('exampleResponse');
 
+generatedUrl.style.display = "none";
 copyIcon.style.display = "none";
+exampleResponse.style.display = "none";
 
 generateButton.addEventListener("click", function () {
     if (!nameTagInput.value.includes("#")) return alert("Please enter a valid username in the format Name#Tag");
@@ -47,9 +49,10 @@ generateButton.addEventListener("click", function () {
             generatedUrl.textContent = url;
     }
 
+    generatedUrl.style.display = "block";
     copyIcon.style.display = "inline-block";
+    exampleResponse.style.display = "block";
 
-    exampleResponse.textContent = "Generating response...";
     setExample(data);
 });
 
