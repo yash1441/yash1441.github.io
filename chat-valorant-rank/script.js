@@ -13,8 +13,8 @@ copyIcon.style.display = "none";
 generateButton.addEventListener("click", function () {
     if (!nameTagInput.value.includes("#")) return alert("Please enter a valid username in the format Name#Tag");
 
-    const queryData = {
-        username: nameTagInput,
+    const data = {
+        username: nameTagInput.value,
         name: nameTagInput.value.split("#")[0],
         tag: nameTagInput.value.split("#")[1],
         region: regionSelect.value,
@@ -22,16 +22,16 @@ generateButton.addEventListener("click", function () {
         mmrChange: showRRChangeCheckbox.checked
     };
 
-    const fixedName = encodeURIComponent(queryData.name.replace(' ', ''));
-    const fixedTag = encodeURIComponent(queryData.tag);
+    const fixedName = encodeURIComponent(data.name.replace(' ', ''));
+    const fixedTag = encodeURIComponent(data.tag);
 
     let url = "https://splendid-groovy-feverfew.glitch.me/valorant";
-    url += "/" + queryData.region;
+    url += "/" + data.region;
     url += "/" + fixedName + "/" + fixedTag;
 
-    if (queryData.onlyRank && queryData.mmrChange) url += "?onlyRank=true&mmrChange=true";
-    else if (queryData.onlyRank) url += "?onlyRank=true";
-    else if (queryData.mmrChange) url += "?mmrChange=true";
+    if (data.onlyRank && data.mmrChange) url += "?onlyRank=true&mmrChange=true";
+    else if (data.onlyRank) url += "?onlyRank=true";
+    else if (data.mmrChange) url += "?mmrChange=true";
 
     switch (platformSelect.value) {
         case "streamelements":
@@ -50,7 +50,7 @@ generateButton.addEventListener("click", function () {
     copyIcon.style.display = "inline-block";
 
     exampleResponse.textContent = "Generating response...";
-    setExample(queryData);
+    setExample(data);
 });
 
 copyIcon.addEventListener('click', function () {
@@ -58,17 +58,13 @@ copyIcon.addEventListener('click', function () {
     navigator.clipboard.writeText(generatedUrl.textContent);
 });
 
-function setExample(queryData) {
-    fetch(`https://api.henrikdev.xyz/valorant/v1/mmr/${regionSelect.value}/${name}/${tag}?api_key=${process.env.BASE_KEY}`)
-        .then(response => response.json())
-        .then(data => {
-            let buffer = '';
-            if (!data.onlyRank) {
-                buffer += queryData.username;
-                buffer += " [" + data.data.currenttier + "]";
-            }
-            else buffer += data.data.currenttierpatched;
-            if (queryData.mmrChange) buffer += " [" + data.data.mmr_change_to_last_game + "]";
-            exampleResponse.textContent = buffer;
-        })
+function setExample(data) {
+    let buffer = '';
+    if (!data.onlyRank) {
+        buffer += data.username;
+        buffer += " [Immortal 2] : 120 RR";
+    }
+    else buffer += "Immortal 2 : 120 RR";
+    if (data.mmrChange) buffer += " [-22]";
+    exampleResponse.textContent = buffer;
 }
