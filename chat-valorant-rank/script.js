@@ -2,6 +2,7 @@ const nameTagInput = document.getElementById('nameTag');
 const regionSelect = document.getElementById('region');
 const hideUsernameCheckbox = document.getElementById('hideUsername');
 const showRRChangeCheckbox = document.getElementById('showRRChange');
+const uniqueColorCheckbox = document.getElementById('uniqueColor');
 const platformSelect = document.getElementById('platform');
 const generateButton = document.getElementById('generateButton');
 const generatedUrl = document.getElementById('generatedUrl');
@@ -21,7 +22,8 @@ generateButton.addEventListener("click", function () {
         tag: nameTagInput.value.split("#")[1],
         region: regionSelect.value,
         onlyRank: hideUsernameCheckbox.checked,
-        mmrChange: showRRChangeCheckbox.checked
+        mmrChange: showRRChangeCheckbox.checked,
+        uniqueColor: uniqueColorCheckbox.checked,
     };
 
     const fixedName = encodeURIComponent(data.name.replace(' ', ''));
@@ -45,9 +47,14 @@ generateButton.addEventListener("click", function () {
         case "fossabot":
             generatedUrl.textContent = "$(customapi " + url + ")";
             break;
+        case "streamlabs":
+            generatedUrl.textContent = "{readapi." + url + "}";
+            break;
         default:
             generatedUrl.textContent = url;
     }
+
+    if (data.uniqueColor) generatedUrl.textContent = "/me " + generatedUrl.textContent;
 
     generatedUrl.style.display = "block";
     copyIcon.style.display = "inline-block";
