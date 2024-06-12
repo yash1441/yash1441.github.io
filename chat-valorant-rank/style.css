@@ -59,6 +59,10 @@ label {
 	margin-left: 10px; /* Add margin for spacing */
 }
 
+#githubButton {
+	padding-top: 10px;
+}
+
 #exampleResponse {
 	font-weight: bold;
 	margin-top: 20px;
