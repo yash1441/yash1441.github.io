@@ -118,7 +118,7 @@ function formatUrlForPlatform(url, platform, uniqueColor) {
 function setExample(data) {
 	let buffer = "";
 	if (!data.onlyRank) {
-		buffer += modeSwitch.checked ? data.puuid : data.username;
+		buffer += modeSwitch.checked ? "Name#Tag" : data.username;
 		buffer += " [Immortal 2] : 120 RR";
 	} else {
 		buffer += "Immortal 2 : 120 RR";
